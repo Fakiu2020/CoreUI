@@ -43,6 +43,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalDeleteComponent } from './views/shared/modal-delete/modal-delete.component';
+import { ToastrModule } from 'ngx-toastr';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -61,6 +64,15 @@ import { HttpClientModule } from '@angular/common/http';
     IconModule,
     IconSetModule.forRoot(),
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      progressBar : true
+    }),
   ],
   declarations: [
     AppComponent,
@@ -68,8 +80,10 @@ import { HttpClientModule } from '@angular/common/http';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ModalDeleteComponent
   ],
+
   providers: [
     {
       provide: LocationStrategy,

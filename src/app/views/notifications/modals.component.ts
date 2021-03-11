@@ -7,7 +7,7 @@ import {ModalDirective} from 'ngx-bootstrap/modal';
 export class ModalsComponent {
   @ViewChild('myModal') public myModal: ModalDirective;
   @ViewChild('largeModal') public largeModal: ModalDirective;
-  @ViewChild('smallModal') public smallModal: ModalDirective;
+  @ViewChild('smallModal') public smallModal: ModalDirective; 
   @ViewChild('primaryModal') public primaryModal: ModalDirective;
   @ViewChild('successModal') public successModal: ModalDirective;
   @ViewChild('warningModal') public warningModal: ModalDirective;
